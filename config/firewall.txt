@@ -1,0 +1,14 @@
+--------------------FIREWALL----------------------
+sudo ufw allow http
+-sudo ufw allow 6000:6007/tcp <Specific Port Ranges>
+-sudo ufw allow from 203.0.113.4 <Specific IP Addresses>
+-sudo ufw allow from 203.0.113.4 to any port 22 <Specific IP Addresses To Port>
+-sudo ufw allow from 203.0.113.0/24 <Subnets>
+-sudo ufw allow from 203.0.113.0/24 to any port 22 <Subnets To Port>
+-sudo ufw deny http <Denying Connections>
+-sudo ufw deny from 203.0.113.4 <Denying Connections From IP>
+-sudo ufw status numbered <Get List Firewall Rule>
+-sudo ufw delete 2 <Delete Rule By Number>
+
+------------------------CERTBOT---------------------------
+-renew certificate: certbot certonly --force-renew -d example.com
